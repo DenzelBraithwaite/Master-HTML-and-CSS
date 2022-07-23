@@ -5,8 +5,10 @@
 }
 
 body {
+    position: relative;
     font-family: sans-serif;
     color: #444;
+    border-top: 10px solid #1098ad;
 }
 
 .container {
@@ -247,4 +249,20 @@ footer {
     font-weight: bold;
     display: block;
     margin-bottom: 4px;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start;
+    gap: 75px;
+    margin-bottom: 60px;
+}
+
+.article {
+    flex: 1 0 auto;
+    margin-bottom: 0;
+}
+
+.aside {
+    flex: 0 0 300px;
 }
