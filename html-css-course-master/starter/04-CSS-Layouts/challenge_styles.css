@@ -4,18 +4,20 @@
 }
 
 .container {
+    position: relative;
+    border: 4px solid black;
     width: 825px;
     margin: 48px auto;
+}
+
+.card {
+    display: flex;
+    gap: 40px;
 }
 
 body {
     font-family: sans-serif;
     line-height: 1.4;
-}
-
-.product {
-    border: 4px solid black;
-    position: relative;
 }
 
 .product-title {
@@ -42,29 +44,25 @@ body {
     width: 250px;
     height: 250px;
     float: left;
-    margin-right: 40px;
 }
 
 .product-description {
-    clear: both;
     margin-bottom: 12px;
 }
 
 .product-info {
-    float: left;
     width: 240px;
-    margin-right: 40px;
     margin-top: 20px;
+    flex: 1 0 auto;
 }
 
 .product-details {
     width: 240px;
-    float: left;
     margin-top: 20px;
+    flex: 1 0 auto;
 }
 
 .price {
-    float: left;
     font-size: 24px;
 }
 
@@ -73,8 +71,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     color: #777;
-    margin: 8px 0 16px;
-    float: right;
+    margin: 8px 0 0;
 }
 
 .more-info:link,
@@ -120,40 +117,43 @@ body {
 }
 
 .colored-squares {
+    display: flex;
     margin: 16px 0;
+    gap: 12px;
 }
 
 .square {
-    display: inline-block;
-    height: 22px;
-    width: 22px;
+    flex: 0 0 20px;
+    height: 20px;
 }
 
 .square-black {
     background-color: #000;
-    margin-right: 8px;
 }
 
 .square-blue {
     background-color: #2f6ee2;
-    margin-right: 8px;
 }
 
 .square-red {
     background-color: #ec2f2f;
-    margin-right: 8px;
 }
 
 .square-yellow {
     background-color: #f0bf1e;
-    margin-right: 8px;
 }
 
 .square-green {
     background-color: #90cc20;
-    margin-right: 8px;
 }
 
 .square-brown {
     background-color: #885214;
+}
+
+.product-info-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
 }
