@@ -4,7 +4,7 @@
 }
 
 .container {
-    width: 50%;
+    width: 825px;
     margin: 48px auto;
 }
 
@@ -38,7 +38,33 @@ body {
     left: -36px;
 }
 
+.product-img {
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin-right: 40px;
+}
+
+.product-description {
+    clear: both;
+    margin-bottom: 12px;
+}
+
+.product-info {
+    float: left;
+    width: 240px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.product-details {
+    width: 240px;
+    float: left;
+    margin-top: 20px;
+}
+
 .price {
+    float: left;
     font-size: 24px;
 }
 
@@ -47,7 +73,8 @@ body {
     font-size: 12px;
     font-weight: bold;
     color: #777;
-    margin-bottom: 16px;
+    margin: 8px 0 16px;
+    float: right;
 }
 
 .more-info:link,
