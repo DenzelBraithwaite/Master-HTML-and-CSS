@@ -1,18 +1,7 @@
 * {
-    padding: 0;
     margin: 0;
-}
-
-.container {
-    position: relative;
-    border: 4px solid black;
-    width: 825px;
-    margin: 48px auto;
-}
-
-.card {
-    display: flex;
-    gap: 40px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,46 +9,43 @@ body {
     line-height: 1.4;
 }
 
-.product-title {
-    font-size: 22px;
-    background-color: #f7f7f7;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 16px;
-}
-
-.product-title::before {
-    color: #fff;
-    content: 'sale';
-    background-color: #ec2f2f;
-    font-size: 12px;
-    letter-spacing: 4px;
-    padding: 6px 12px;
-    position: absolute;
-    top: -18px;
-    left: -36px;
-}
-
 .product-img {
-    width: 250px;
-    height: 250px;
-    float: left;
 }
 
-.product-description {
-    margin-bottom: 12px;
+/* PRODUCT */
+.product {
+    border: 4px solid black;
+    width: 825px;
+    margin: 50px auto;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr;
+    column-gap: 40px;
 }
 
+.product-title {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    background-color: #f7f7f7;
+    padding: 15px;
+    grid-column: 1 / -1;
+}
+
+/* PRODUCT INFORMATION */
 .product-info {
-    width: 240px;
+    /*  (825 - 8 - 250 - 80) / 2  */
+    /*   width: 243px; */
+    flex: 1;
     margin-top: 20px;
-    flex: 1 0 auto;
 }
 
-.product-details {
-    width: 240px;
-    margin-top: 20px;
-    flex: 1 0 auto;
+.product-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .price {
@@ -67,16 +53,38 @@ body {
 }
 
 .shipping {
-    text-transform: uppercase;
     font-size: 12px;
+    text-transform: uppercase;
     font-weight: bold;
     color: #777;
-    margin: 8px 0 0;
+}
+
+.sale {
+    background-color: #ec2f2f;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 7px 15px;
+    display: inline-block;
+    position: absolute;
+    top: -17px;
+    left: -38px;
+
+    /*   width: 40px;
+    text-align: center; */
+}
+
+.product-description {
+    margin-bottom: 10px;
 }
 
 .more-info:link,
 .more-info:visited {
-    color: #444;
+    color: black;
+    margin-bottom: 30px;
+    display: inline-block;
 }
 
 .more-info:hover,
@@ -84,76 +92,70 @@ body {
     text-decoration: none;
 }
 
-.details-title {
-    font-size: 16px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-}
-
-.details-list {
-    margin-left: 20px;
-    list-style: square;
-}
-
-.details-list li {
-    margin-bottom: 12px;
-}
-
-.add-to-cart {
-    padding: 20px;
-    border: none;
-    text-transform: uppercase;
-    font-size: 20px;
-    background-color: #000;
-    color: #fff;
-    width: 100%;
-}
-
-.add-to-cart:hover {
-    border-top: black solid 4px;
-    color: #000;
-    background-color: #fff;
-    cursor: pointer;
-}
-
-.colored-squares {
+.product-colors {
     display: flex;
-    margin: 16px 0;
-    gap: 12px;
+    gap: 10px;
 }
 
-.square {
-    flex: 0 0 20px;
-    height: 20px;
-}
-
-.square-black {
+.color {
     background-color: #000;
+    height: 22px;
+    width: 22px;
 }
 
-.square-blue {
+.color-blue {
     background-color: #2f6ee2;
 }
-
-.square-red {
+.color-red {
     background-color: #ec2f2f;
 }
-
-.square-yellow {
+.color-yellow {
     background-color: #f0bf1e;
 }
-
-.square-green {
+.color-green {
     background-color: #90cc20;
 }
-
-.square-brown {
+.color-brown {
     background-color: #885214;
 }
 
-.product-info-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
+/* PRODUCT DETAILS */
+.product-details {
+    /*   width: 243px; */
+    margin-top: 20px;
+    flex: 1;
+}
+
+.details-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.details-list {
+    list-style: square;
+    margin-left: 20px;
+}
+
+.details-list li {
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.add-cart {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border-top: 4px solid black;
+    grid-column: 1 / -1;
+}
+
+.add-cart:hover {
+    color: #000;
+    background-color: #fff;
 }
