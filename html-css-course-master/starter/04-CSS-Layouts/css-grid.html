@@ -41,6 +41,26 @@
                 z-index: 1;
             }
 
+            /* 2nd container elements */
+            .el2--1 {
+                background-color: blueviolet;
+            }
+            .el2--3 {
+                background-color: green;
+            }
+            .el2--4 {
+                background-color: goldenrod;
+            }
+            .el2--5 {
+                background-color: palevioletred;
+            }
+            .el2--6 {
+                background-color: steelblue;
+            }
+            .el2--7 {
+                background-color: yellow;
+            }
+
             .container--1 {
                 /* STARTER */
                 font-family: sans-serif;
@@ -49,7 +69,7 @@
                 margin: 40px;
 
                 /* CSS GRID */
-                display: grid;
+                display: none;
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-rows: 1fr 1fr;
                 column-gap: 20px;
@@ -68,10 +88,9 @@
                 height: 600px;
 
                 /* CSS GRID */
-                display: none;
-                grid-template-columns: repeat(4, 1fr);
-                column-gap: 20px;
-                row-gap: 40px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr 1fr;
             }
         </style>
     </head>
@@ -88,12 +107,12 @@
         </div>
 
         <div class="container--2">
-            <div class="el el--1">(1)</div>
-            <div class="el el--3">(3)</div>
-            <div class="el el--4">(4)</div>
-            <div class="el el--5">(5)</div>
-            <div class="el el--6">(6)</div>
-            <div class="el el--7">(7)</div>
+            <div class="l2 el2--1">(1)</div>
+            <div class="l2 el2--3">(3)</div>
+            <div class="l2 el2--4">(4)</div>
+            <div class="l2 el2--5">(5)</div>
+            <div class="l2 el2--6">(6)</div>
+            <div class="l2 el2--7">(7)</div>
         </div>
     </body>
 </html>
