@@ -20,8 +20,11 @@ Grey: #343a40
 /* ------------------------ */
 /* GENERAL STYLES */
 /* ------------------------ */
+
 body {
     font-family: sans-serif;
+    color: #343a40;
+    border-bottom: 8px solid #087f5b;
 }
 
 .container {
@@ -47,11 +50,28 @@ h2 {
 .btn:link,
 .btn:visited {
     background-color: #087f5b;
+    font-size: 18px;
     color: #fff;
     text-transform: capitalize;
     text-decoration: none;
     padding: 16px 24px;
     display: inline-block;
+    font-weight: 500;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #099268;
+}
+
+.btn-small {
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+.btn-big {
+    font-size: 18px;
+    padding: 16px 32px;
 }
 
 /* ------------------------ */
@@ -95,6 +115,10 @@ img {
 
 /* TESTIMONIAL */
 .testimonial-section {
+    background-color: #087f5b;
+    color: red;
+    color: #fff;
+    padding: 24px;
 }
 
 .testimonial-box {
@@ -146,4 +170,5 @@ h3 {
 
 footer {
     margin-bottom: 48px;
+    color: #495057;
 }
