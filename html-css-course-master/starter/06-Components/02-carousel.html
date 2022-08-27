@@ -8,6 +8,7 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
             rel="stylesheet"
         />
+        <title>Carousel</title>
         <style>
             /*
             SPACING SYSTEM (px)
@@ -36,7 +37,6 @@
                 height: 200px;
                 border-radius: 8px;
                 transform: scale(1.5);
-                translate: 48px;
                 box-shadow: 0 24px 32px rgba(0, 0, 0, 0.25);
             }
 
@@ -46,7 +46,7 @@
                 width: 800px;
                 margin: 100px auto;
                 border-radius: 8px;
-                padding: 32px;
+                padding: 32px 48px 32px 86px;
 
                 display: flex;
                 align-items: center;
@@ -83,12 +83,14 @@
                 align-items: center;
                 justify-content: center;
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            }
-
-            .btn:active,
-            .btn:hover {
+                top: 50%;
                 cursor: pointer;
             }
+
+            /* .btn:active,
+            .btn:hover {
+                cursor: pointer;
+            } */
 
             .btn-icon {
                 stroke: #087f5b;
@@ -96,14 +98,42 @@
                 width: 24px;
             }
 
-            .btn-left {
+            .btn--left {
                 position: absolute;
-                left: -20px;
+                left: 0;
+                transform: translate(-50%, -50%);
             }
 
-            .btn-right {
+            .btn--right {
                 position: absolute;
-                right: -20px;
+                right: 0;
+                transform: translate(50%, -50%);
+            }
+
+            .dots {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 32px);
+
+                /* display: flex;
+                gap: 8px; */
+
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 8px;
+            }
+
+            .dot {
+                border: 2px solid #087f5b;
+                background-color: #fff;
+                height: 12px;
+                width: 12px;
+                border-radius: 50%;
+            }
+
+            .dot--active {
+                background-color: #087f5b;
             }
         </style>
         <title>Carousel component</title>
@@ -122,7 +152,7 @@
                     Senior Product Manager at EDP comercial
                 </p>
             </blockquote>
-            <button class="btn btn-left">
+            <button class="btn btn--left">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -138,7 +168,7 @@
                     />
                 </svg>
             </button>
-            <button class="btn btn-right">
+            <button class="btn btn--right">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -154,6 +184,12 @@
                     />
                 </svg>
             </button>
+            <div class="dots">
+                <button class="dot dot--active">&nbsp;</button>
+                <button class="dot">&nbsp;</button>
+                <button class="dot">&nbsp;</button>
+                <button class="dot">&nbsp;</button>
+            </div>
         </div>
     </body>
 </html>
