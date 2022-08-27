@@ -32,10 +32,86 @@
                 color: #343a40;
                 line-height: 1;
             }
+
+            table {
+                margin: 100px auto 0;
+                width: 800px;
+                border-collapse: collapse;
+            }
+
+            /* thead {
+                background-color: #087f5b;
+                color: #fff;
+            } */
+
+            tbody tr:nth-child(odd) {
+                background-color: #f8f9fa;
+            }
+
+            tbody track:nth-child(even) {
+                background-color: #e9ecef;
+            }
+
+            /* .row--odd {
+                background-color: #f8f9fa;
+            }
+
+            .row--even {
+                background-color: #e9ecef;
+            } */
+
+            th, td {
+                padding: 16px 24px;
+                font-size: 18px;
+                text-align: left;
+            }
+
+            thead th {
+                background-color: #087f5b;
+                color: #fff;
+                width: 25%;
+            }
         </style>
         <title>component</title>
     </head>
     <body>
-        <h1>table</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Chair</th>
+                    <th>The Laid Back</th>
+                    <th>The Worker Bee</th>
+                    <th>The Chair 4/2</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="row--odd">
+                    <th>Width</th>
+                    <td>80 cm</td>
+                    <td>60 cm</td>
+                    <td>220 cm</td>
+                </tr>
+                <tr class="row--even">
+                    <th>Height</th>
+                    <td>100 cm</td>
+                    <td>110 cm</td>
+                    <td>90 cm</td>
+                </tr>
+                <tr class="row--odd">
+                    <th>Depth</th>
+                    <td>70 cm</td>
+                    <td>65 cm</td>
+                    <td>80 cm</td>
+                </tr>
+                <tr class="row--even">
+                    <th>Weight</th>
+                    <td>16 kg</td>
+                    <td>22 kg</td>
+                    <td>80 kg</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
     </body>
 </html>
