@@ -33,7 +33,7 @@
                 line-height: 1;
             }
 
-            nav {
+            .pagination {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -44,13 +44,14 @@
 
             a:link,
             a:visited {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 text-decoration: none;
-                color: #000;
-                padding: 8px;
+                color: #343a40;
+                font-size: 18px;
                 width: 32px;
                 height: 32px;
-                text-align: center;
-                justify-content: center;
                 border-radius: 50%;
             }
 
@@ -61,25 +62,27 @@
             }
 
             button {
-                border: none;
-                background-color: #fff;
-            }
-
-            /* Fix this maybe */
-            .btn {
-                width: 32px;
-                height: 32px;
+                height: 48px;
+                width: 48px;
                 border: 1px solid #087f5b;
                 border-radius: 50%;
-                stroke: #087f5b;
-                padding: 8px;
+                background: none;
+                cursor: pointer;
             }
 
-            .btn:hover,
-            .btn:active {
-                stroke: #fff;
+            button:active,
+            button:hover {
                 background-color: #087f5b;
-                cursor: pointer;
+            }
+
+            button:hover .btn {
+                stroke: #fff;
+            }
+
+            .btn {
+                width: 24px;
+                height: 24px;
+                stroke: #087f5b;
             }
 
             .btn--filled:link,
@@ -90,7 +93,7 @@
         </style>
     </head>
     <body>
-        <nav>
+        <div class="pagination">
             <button>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -131,6 +134,6 @@
                     />
                 </svg>
             </button>
-        </nav>
+        </div>
     </body>
 </html>
