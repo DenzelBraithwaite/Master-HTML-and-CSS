@@ -18,9 +18,7 @@
                 color: #343a40;
                 font-size: 24px;
                 line-height: 1;
-            }
 
-            .grid-container {
                 height: 100vh;
                 display: grid;
                 grid-template-columns: 80px 400px 1fr 250px;
@@ -42,6 +40,18 @@
 
             section {
                 background-color: #e9ecef;
+                padding-top: 32px;
+                display: flex;
+                gap: 32px;
+                flex-direction: column;
+                overflow-y: scroll;
+            }
+
+            section p {
+                border: 2px solid black;
+                text-align: center;
+                padding-top: 32px;
+                padding-bottom: 32px;
             }
 
             main {
@@ -91,20 +101,29 @@
         </style>
     </head>
     <body>
-        <div class="grid-container">
-            <nav>NAV</nav>
-            <menu class="email-buttons">
-                <div>
-                    <button class="email-button">New</button>
-                    <button class="email-button">reply</button>
-                    <button class="email-button">Forward</button>
-                    <button class="email-button">Mark unread</button>
-                </div>
-                <button class="trash-button">Trash</button>
-            </menu>
-            <section>INBOX</section>
-            <main>Email view</main>
-            <aside>Additional info</aside>
-        </div>
+        <nav>NAV</nav>
+        <menu class="email-buttons">
+            <div>
+                <button class="email-button">New</button>
+                <button class="email-button">reply</button>
+                <button class="email-button">Forward</button>
+                <button class="email-button">Mark unread</button>
+            </div>
+            <button class="trash-button">Trash</button>
+        </menu>
+        <section>
+            <p>New email !</p>
+            <p>New email !</p>
+            <p>New email !</p>
+            <p>New email !</p>
+            <p>New email !</p>
+            <p>New email !</p>
+            <p>New email !</p>
+            <p>New email !</p>
+            <p>New email !</p>
+            <p>New email !</p>
+        </section>
+        <main>Email view</main>
+        <aside>Additional info</aside>
     </body>
 </html>
