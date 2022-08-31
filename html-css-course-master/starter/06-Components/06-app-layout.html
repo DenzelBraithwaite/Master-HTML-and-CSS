@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>App layout</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: sans-serif;
+                color: #343a40;
+                font-size: 24px;
+                line-height: 1;
+            }
+
+            .grid-container {
+                height: 100vh;
+                display: grid;
+                grid-template-columns: 80px 400px 1fr 250px;
+                grid-template-rows: 80px 1fr;
+            }
+
+            nav {
+                background-color: #28383b;
+                grid-row: 1 / -1;
+                color: #fff;
+            }
+
+            menu {
+                background-color: #1098ad;
+                color: #fff;
+                grid-column: 2 / -1;
+                padding: 16px;
+            }
+
+            section {
+                background-color: #e9ecef;
+            }
+
+            main {
+            }
+
+            aside {
+                background-color: #e9ecef;
+            }
+
+            button {
+                border: none;
+                color: #fff;
+                padding: 8px 16px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            button:active,
+            button:hover {
+                transform: scale(1.05);
+            }
+
+            .email-buttons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .email-button {
+                background-color: #0c8599;
+            }
+
+            .email-button:active,
+            .email-button:hover {
+                background-color: #0b7285;
+            }
+
+            .trash-button {
+                background-color: #fa5252;
+                font-weight: bold;
+            }
+
+            .trash-button:active,
+            .trash-button:hover {
+                background-color: #f03e3e;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <nav>NAV</nav>
+            <menu class="email-buttons">
+                <div>
+                    <button class="email-button">New</button>
+                    <button class="email-button">reply</button>
+                    <button class="email-button">Forward</button>
+                    <button class="email-button">Mark unread</button>
+                </div>
+                <button class="trash-button">Trash</button>
+            </menu>
+            <section>INBOX</section>
+            <main>Email view</main>
+            <aside>Additional info</aside>
+        </div>
+    </body>
+</html>
