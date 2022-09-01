@@ -18,11 +18,20 @@
                 color: #343a40;
                 font-size: 24px;
                 line-height: 1;
+                text-align: center;
+                font-weight: bold;
 
                 height: 100vh;
                 display: grid;
                 grid-template-columns: 80px 400px 1fr 250px;
                 grid-template-rows: 80px 1fr;
+            }
+
+            nav,
+            section,
+            main,
+            aside {
+                padding-top: 32px;
             }
 
             nav {
@@ -39,25 +48,26 @@
             }
 
             section {
-                background-color: #e9ecef;
-                padding-top: 32px;
                 display: flex;
+                background-color: #e9ecef;
                 gap: 32px;
                 flex-direction: column;
                 overflow-y: scroll;
             }
 
-            section p {
-                background-color: #868e96;
-                text-align: center;
-                padding-top: 32px;
-                padding-bottom: 32px;
+            .email {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #92a3a5;
+                height: 96px;
                 cursor: pointer;
+                flex: 0 0 auto;
             }
 
-            section p:active,
-            section p:hover {
-                background-color: #adb5bd;
+            .email:active,
+            .email:hover {
+                background-color: #99b1b4;
             }
 
             main {
@@ -96,13 +106,12 @@
             }
 
             .trash-button {
-                background-color: #fa5252;
-                font-weight: bold;
+                background-color: #d6336c;
             }
 
             .trash-button:active,
             .trash-button:hover {
-                background-color: #f03e3e;
+                background-color: #c2255c;
             }
         </style>
     </head>
@@ -118,16 +127,21 @@
             <button class="trash-button">Trash</button>
         </menu>
         <section>
-            <p>New email !</p>
-            <p>New email !</p>
-            <p>New email !</p>
-            <p>New email !</p>
-            <p>New email !</p>
-            <p>New email !</p>
-            <p>New email !</p>
-            <p>New email !</p>
-            <p>New email !</p>
-            <p>New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
+            <p class="email">New email !</p>
         </section>
         <main>Email view</main>
         <aside>Additional info</aside>
